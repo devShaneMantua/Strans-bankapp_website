@@ -1,0 +1,280 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 6rem;
+}
+
+.container .content {
+  flex: 1;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.container .content h1 {
+  padding: 3rem 2rem 1.5rem 0;
+  font-size: 4rem;
+}
+
+.container .content p {
+  font-size: 1.3rem;
+  padding-right: 2rem;
+}
+
+.container .more {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 0.5rem 1rem;
+  margin: 1.3rem 2rem 1rem 0;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  transition: 0.5s;
+}
+
+.container .more:hover {
+  letter-spacing: 3.5px;
+}
+
+.container .glass-card {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card {
+  position: relative;
+  width: 508px;
+  height: 314px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  z-index: 2;
+}
+
+.card .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blue(28px);
+  transition: 1s;
+  backface-visibility: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+.card .back {
+  transform: rotateY(180deg);
+}
+.card:hover .back {
+  transform: rotateY(360deg);
+}
+
+.card .front .gif {
+  position: absolute;
+  right: -150px;
+  top: 80px;
+  z-index: -10;
+  opacity: 0.7;
+}
+
+.card .front .map-img {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  color: #000;
+  left: 0;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.card .front .chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  z-index: 1;
+}
+
+.card .front .chip img {
+  width: 80px;
+}
+
+.card .front .number {
+  position: absolute;
+  bottom: 130px;
+  left: 40px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 6px;
+  font-size: 22px;
+  text-shadow: 0 2px 1px #0005;
+}
+
+.card .front .valid {
+  position: absolute;
+  bottom: 90px;
+  left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1em;
+  text-align: right;
+}
+
+.card .front .valid span:last-child {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.card .front .card-holder {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: #fff;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card .back .blackbar {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 60px;
+  background: #000;
+}
+
+.card .back .cvvtext {
+  position: absolute;
+  top: 120px;
+  left: 30px;
+}
+
+.card .back .cvvtext .white-bar {
+  position: relative;
+  width: 380px;
+  height: 47px;
+}
+.card .back .cvvtext .white-bar img {
+  width: 100%;
+  display: block;
+  height: 45px;
+  line-height: 0;
+}
+
+.card .back .cvvtext .cvv {
+  position: relative;
+  top: -48px;
+  left: 370px;
+  background: #fff;
+  color: #111;
+  width: 50px;
+  height: 45px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .back .text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 1.4rem;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1026px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container .glass-card {
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container .content h1 {
+    padding: 1rem 1rem 0 1rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .container .content p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .container .buttons {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container .glass-card {
+    overflow: hidden;
+  }
+
+  .card .back .cvvtext .white-bar {
+    width: 90%;
+  }
+
+  .card .back .cvvtext .cvv {
+    display: hidden;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .container .content h1 {
+    padding: 1.5rem 1rem 0 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .container .content p {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .container .neon-button {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .container .more {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 326px) {
+  .container .neon-button {
+    font-size: 0.7rem;
+  }
+
+  .container .more {
+    font-size: 0.7rem;
+  }
+}

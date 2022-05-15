@@ -1,2 +1,1 @@
-# Strans-bankapp_website
-Created with CodeSandbox
+# Strans-bank_app_website

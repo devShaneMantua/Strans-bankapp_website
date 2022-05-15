@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  --font-family: "Ubuntu", sans-serif;
+  --primary-color: #80ff72;
+  --footer-color: #05030e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: #fff;
+  font-size: 100%;
+  background-color: #05030e;
+  transition: all 0.45s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.gradient__bg {
+  /* ff 3.6+ */
+  background: -moz-radial-gradient(
+    circle at 3% 25%,
+    rgba(60, 91, 57, 1) 0%,
+    rgba(5, 3, 14, 1) 25%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    circle at 3% 25%,
+    rgba(60, 91, 57, 1) 0%,
+    rgba(5, 3, 14, 1) 25%
+  );
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    circle at 3% 25%,
+    rgba(60, 91, 57, 1) 0%,
+    rgba(5, 3, 14, 1) 25%
+  );
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    circle at 3% 25%,
+    rgba(60, 91, 57, 1) 0%,
+    rgba(5, 3, 14, 1) 25%
+  );
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    circle at 3% 25%,
+    rgba(60, 91, 57, 1) 0%,
+    rgba(5, 3, 14, 1) 25%
+  );
+}
+
+.gradient2__bg {
+  /* ff 3.6+ */
+  background: -moz-radial-gradient(
+    ellipse at 50% 50%,
+    rgba(29, 30, 32, 1) 0%,
+    rgba(5, 3, 14, 1) 64%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    ellipse at 50% 50%,
+    rgba(29, 30, 32, 1) 0%,
+    rgba(5, 3, 14, 1) 64%
+  );
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    ellipse at 50% 50%,
+    rgba(29, 30, 32, 1) 0%,
+    rgba(5, 3, 14, 1) 64%
+  );
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    ellipse at 50% 50%,
+    rgba(29, 30, 32, 1) 0%,
+    rgba(5, 3, 14, 1) 64%
+  );
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(29, 30, 32, 1) 0%,
+    rgba(5, 3, 14, 1) 64%
+  );
+}
+
+.gradient-text {
+  background: linear-gradient(89.97deg, #80ff72 1.84%, #7ee8fa 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-logo {
+  background: linear-gradient(89.97deg, #aaea73 1.84%, #a0e901 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section__padding {
+  padding: 4rem 5%;
+}
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* BUTTONS */
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.neon-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 1.3rem 2rem 1rem 0;
+  overflow: hidden;
+  transition: 0.5s;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.neon-button:hover {
+  background-color: var(--primary-color);
+  color: #000;
+  box-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color),
+    0 0 50px var(--primary-color), 0 0 100px var(--primary-color);
+}
+
+.neon-button span {
+  position: absolute;
+  display: block;
+}
+
+.neon-button span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-color));
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.neon-button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--primary-color));
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.neon-button span:nth-child(3) {
+  bottom: 0;
+  right: -100;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--primary-color));
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.neon-button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--primary-color));
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container .buttons {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .container .neon-button {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 326px) {
+  .container .neon-button {
+    font-size: 0.7rem;
+  }
+}

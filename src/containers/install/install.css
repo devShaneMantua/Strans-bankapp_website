@@ -1,0 +1,103 @@
+.install {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 2rem;
+  position: relative;
+  z-index: 50;
+}
+
+.install .install-content {
+  width: 48%;
+  position: absolute;
+  bottom: -130px;
+  left: 40px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  padding: 2rem;
+}
+
+.install-content h3 {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.install-content h6 {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 0.4rem;
+}
+
+.install-content p {
+  padding: 1rem;
+  text-align: center;
+}
+
+.install-content img {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  padding-top: 1.3rem;
+  margin: auto;
+}
+
+@media screen and (max-width: 1136px) {
+  .install .install-content {
+    bottom: -180px;
+    left: auto;
+    padding: 1.5rem;
+  }
+  .install-content h3 {
+    font-size: 2rem;
+  }
+
+  .install-content h6 {
+    font-size: 1.2rem;
+  }
+  .install-content img {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 956px) {
+  .install-content h3 {
+    font-size: 2rem;
+  }
+
+  .install-content h6 {
+    font-size: 1.2rem;
+  }
+
+  .install-content p {
+    font-size: 0.8rem;
+  }
+
+  .install-content img {
+    width: 300px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 891px) {
+  .install .install-content {
+    position: relative;
+    width: 90%;
+    bottom: -70px;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .install {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 1rem;
+  }
+}

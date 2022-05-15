@@ -1,0 +1,87 @@
+.features {
+  margin-top: 5rem;
+  margin-bottom: -16rem;
+  overflow: hidden;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 10rem;
+}
+
+.features .feature-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features .feature-cards .card {
+  text-align: center;
+  margin-top: -4rem;
+}
+
+.features .feature-cards .card img {
+  padding: 1rem;
+  width: 10rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+}
+
+.features .feature-cards .card .card-content {
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  margin: -3rem 3rem;
+  padding: 2rem 1rem 1rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.features .feature-cards .card .card-content:hover {
+  backdrop-filter: blur(0px);
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 1114px) {
+  .features {
+    margin-top: 11rem;
+  }
+
+  .features .feature-cards .card img {
+    width: 8rem;
+  }
+
+  .features .feature-cards .card .card-content {
+    padding: 1rem;
+    margin: -2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .features {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .features .feature-cards {
+    flex-direction: column;
+  }
+
+  .features .feature-cards .card {
+    margin-top: -6rem;
+  }
+
+  .features .feature-cards .card .card-content {
+    justify-content: center;
+    align-items: center;
+    margin: -3rem 9rem;
+  }
+}
