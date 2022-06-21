@@ -33,7 +33,7 @@ const Footer = () => (
         <h5>
           Copyright@ 2022 Strans,{" "}
           <a
-            href="https://devshanemantua.github.io/ShaneM-Portfolio/"
+            href="https://shanemoiramantua-personalwebsite.netlify.app/"
             className="portfolio"
           >
             Shane Del Moira
